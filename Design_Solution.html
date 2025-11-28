@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Solution Stage - Team TVC</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- AOS: Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="hero-header animate__animated animate__fadeInDown">
+        <h1 class="display-4 fw-bold">Design Solution Stage</h1>
+        <h2>Team TVC</h2>
+        <p class="lead">Rice Robotics Club - URC Wheel Design</p>
+    </header>
+
+    <!-- Problem Decomposition -->
+    <section class="section-card" id="decomposition" data-aos="fade-up">
+        <h2>Problem Decomposition</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <figure class="figure">
+                    <!-- Using existing resource for decomposition as it wasn't in DS_images -->
+                    <img src="deletelater/resources/drawing0.png" alt="Functional Decomposition Diagram" class="img-fluid-rounded bg-white border p-2" style="width: 100%;">
+                    <figcaption class="figure-caption text-center mt-2">Figure 1: Functional Block Diagram</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <h3>Key Functions & Features</h3>
+                <p>Our design must satisfy the following core functional blocks:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item border-0 ps-0"><strong class="text-primary">Traction Interface:</strong> Must grip soft sand and rock surfaces (Grousers/Tread).</li>
+                    <li class="list-group-item border-0 ps-0"><strong class="text-primary">Structural Support:</strong> Support 50kg rover load without deformation (Core/Spokes).</li>
+                    <li class="list-group-item border-0 ps-0"><strong class="text-primary">Mounting Interface:</strong> Securely attach to rocker-bogie suspension (Hub).</li>
+                    <li class="list-group-item border-0 ps-0"><strong class="text-primary">Impact Dampening:</strong> Absorb shock from drop tests and boulders (Flexible Material/Geometry).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brainstorming Process -->
+    <section class="section-card" id="brainstorming" data-aos="fade-right">
+        <h2>Brainstorming & Design Selection Process</h2>
+        
+        <h3>Process Overview</h3>
+        <p>
+            Our team utilized a structured brainstorming approach over two rounds. 
+            <strong>Round 1</strong> focused on generating a high volume of diverse ideas using the "slip method," resulting in 87 total ideas. 
+            <strong>Round 2</strong> targeted specific gaps identified in the first round, specifically manufacturing methods and material selection.
+        </p>
+        
+        <div class="text-center my-4" data-aos="zoom-in">
+            <img src="images/DS_images/Flowchart_process.png" alt="Brainstorming Process Flowchart" class="img-fluid-rounded" style="max-height: 300px;">
+        </div>
+
+        <h3>Categorized Ideas</h3>
+        <p>We categorized our 80+ unique ideas into five main groups: Feature Design, Alternative Concepts, Movement Modes, Materials, and Manufacturing.</p>
+
+        <div class="row g-4 mt-2">
+            <div class="col-sm-6 col-md-6 col-lg-3 d-flex" data-aos="flip-up" data-aos-delay="100">
+                <div class="idea-card w-100">
+                    <img src="images/DS_images/Features.jpg" alt="Wheel Feature Designs" class="img-fluid mb-3 rounded">
+                    <div class="idea-card-body">
+                        <h4 class="h5">Wheel Features (35 Ideas)</h4>
+                        <small class="text-muted">Spoke designs, grouser shapes, and rim geometries.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 d-flex" data-aos="flip-up" data-aos-delay="200">
+                <div class="idea-card w-100">
+                    <img src="images/DS_images/Alternatives.jpg" alt="Alternative Concepts" class="img-fluid mb-3 rounded">
+                    <div class="idea-card-body">
+                        <h4 class="h5">Alternative Concepts (21 Ideas)</h4>
+                        <small class="text-muted">Tank treads, walker legs, and non-circular mobility.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 d-flex" data-aos="flip-up" data-aos-delay="300">
+                <div class="idea-card w-100">
+                    <img src="images/DS_images/Materials.jpg" alt="Material Ideas" class="img-fluid mb-3 rounded">
+                    <div class="idea-card-body">
+                        <h4 class="h5">Materials (21 Ideas)</h4>
+                        <small class="text-muted">Carbon fiber, aluminum, rubber, and hybrid composites.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 d-flex" data-aos="flip-up" data-aos-delay="400">
+                <div class="idea-card w-100">
+                    <img src="images/DS_images/Manufacturing.jpg" alt="Manufacturing Methods" class="img-fluid mb-3 rounded">
+                    <div class="idea-card-body">
+                        <h4 class="h5">Manufacturing</h4>
+                        <small class="text-muted">CNC machining, 3D printing, and casting techniques.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Selection (Pugh Matrix) -->
+    <section class="section-card" id="selection" data-aos="fade-left">
+        <h2>Design Selection</h2>
+        <p>
+            We narrowed down our top ideas using a Pugh Scoring Matrix. We evaluated 8 distinct concepts against our weighted Design Criteria (Traction, Durability, Replicability, Replaceability, Weight, Size, Coolness).
+        </p>
+
+        <div class="table-responsive">
+            <table class="table table-custom table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Design Criteria</th>
+                        <th>Weight</th>
+                        <th>Rubber w/ Spikes (Winner)</th>
+                        <th>Metal Skeleton</th>
+                        <th>Resin + Polycarb</th>
+                        <th>Metal Star</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Traction</td>
+                        <td>25%</td>
+                        <td class="winner">5 (1.25)</td>
+                        <td>5 (1.25)</td>
+                        <td>2 (0.5)</td>
+                        <td>4 (1.0)</td>
+                    </tr>
+                    <tr>
+                        <td>Durability</td>
+                        <td>25%</td>
+                        <td class="winner">3 (0.75)</td>
+                        <td>3 (0.75)</td>
+                        <td>4 (1.0)</td>
+                        <td>3 (0.75)</td>
+                    </tr>
+                    <tr>
+                        <td>Replicability</td>
+                        <td>20%</td>
+                        <td class="winner">3 (0.6)</td>
+                        <td>2 (0.4)</td>
+                        <td>4 (0.8)</td>
+                        <td>3 (0.6)</td>
+                    </tr>
+                    <tr>
+                        <td>Replaceability</td>
+                        <td>15%</td>
+                        <td class="winner">5 (0.75)</td>
+                        <td>4 (0.6)</td>
+                        <td>5 (0.75)</td>
+                        <td>3 (0.45)</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>5%</td>
+                        <td class="winner">3 (0.15)</td>
+                        <td>3 (0.15)</td>
+                        <td>4 (0.2)</td>
+                        <td>4 (0.2)</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>5%</td>
+                        <td class="winner">5 (0.25)</td>
+                        <td>4 (0.2)</td>
+                        <td>3 (0.15)</td>
+                        <td>4 (0.2)</td>
+                    </tr>
+                    <tr>
+                        <td>Coolness</td>
+                        <td>5%</td>
+                        <td class="winner">3 (0.15)</td>
+                        <td>4 (0.2)</td>
+                        <td>2 (0.1)</td>
+                        <td>5 (0.25)</td>
+                    </tr>
+                    <tr class="table-primary fw-bold">
+                        <td>TOTAL SCORE</td>
+                        <td>100%</td>
+                        <td>3.90 (Rank 1)</td>
+                        <td>3.55 (Rank 4)</td>
+                        <td>3.50 (Rank 5)</td>
+                        <td>3.45 (Rank 6)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="alert alert-success mt-3">
+            <strong>Winning Concept: Rubber Wheel with Metal Spikes.</strong> This design scored highest (3.9/5.0) because it balanced superior traction (essential for the 30° slope) with high scores in replaceability. Although simpler than the "Metal Star," it offered a more reliable and manufacturable solution for the team's timeline.
+        </div>
+    </section>
+
+    <!-- Proposed Solution -->
+    <section class="section-card" id="solution" data-aos="zoom-in-up">
+        <h2>Selected Design Solution</h2>
+        
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 text-center">
+                <h3>Annotated Concept Sketch</h3>
+                <img src="images/DS_images/Prototype_sketch.png" alt="Annotated Concept Sketch" class="img-fluid-rounded border bg-white p-1 mb-2">
+                <p class="text-muted fst-italic">Figure 2: Annotated sketch highlighting the rubber tread integration with metal grousers.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h3>Refined Prototype</h3>
+                <!-- Placeholder for real prototype photo -->
+                <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto border rounded mb-2" style="width: 100%; height: 300px;">
+                    <img src="deletelater/resources/image_1656994581_0.jpg" alt="Refined Prototype" class="img-fluid" style="max-height: 100%; opacity: 0.9;">
+                </div>
+                <p class="text-muted fst-italic">Figure 3: The physical prototype assembled for testing.</p>
+            </div>
+        </div>
+
+        <h3>Operation Video</h3>
+        <div class="bg-black text-white d-flex flex-column align-items-center justify-content-center rounded mb-3" style="height: 400px;">
+            <p class="mb-3">[VIDEO PLACEHOLDER]</p>
+            <p class="small text-white-50">Demonstration of the wheel traversing sand and climbing obstacles.</p>
+            <button class="btn btn-primary">Play Video</button>
+        </div>
+        <p>
+            The video demonstrates the wheel's ability to deform slightly over obstacles (dampening impact) while the metal spikes engage with the loose terrain to provide forward thrust.
+        </p>
+    </section>
+
+    <!-- Testing -->
+    <section class="section-card" id="testing" data-aos="fade-up">
+        <h2>Testing & Validation</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-custom table-striped">
+                <thead>
+                    <tr>
+                        <th>Test Case</th>
+                        <th>Procedure</th>
+                        <th>Success Criteria</th>
+                        <th>Result</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Traction / Slope Climb</td>
+                        <td>Drive up 30° incline w/ sand</td>
+                        <td>No slip > 10cm</td>
+                        <td>Climbed 30° with minimal slip</td>
+                        <td class="test-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Load Test</td>
+                        <td>Apply 75kg static load</td>
+                        <td>No cracking/deformation</td>
+                        <td>Held 75kg, minor flex</td>
+                        <td class="test-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Drop Test</td>
+                        <td>Drop from 1m onto concrete</td>
+                        <td>Operational afterwards</td>
+                        <td>Rim dented, still rolls</td>
+                        <td class="test-partial">PARTIAL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p class="mt-3">
+            <strong>Narrative:</strong> The prototype excelled in traction tests, easily scaling the required incline. However, the drop test revealed a weakness in the rim stiffness, which sustained minor damage. This suggests that while the tread concept is solid, the core structure requires reinforcement.
+        </p>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="section-card" id="conclusion" data-aos="fade-up">
+        <h2>Project Status & Next Steps</h2>
+        <div class="bg-light p-4 rounded border-start border-5 border-info">
+            <h3>Summary</h3>
+            <p>
+                Team TVC has successfully designed and prototyped a hybrid rubber-metal wheel that meets the primary traction and weight criteria for the URC. The "Rubber with Metal Spikes" concept outperformed complex mechanical alternatives in reliability and ease of repair.
+            </p>
+            
+            <h4 class="h5 mt-3">Limitations</h4>
+            <ul>
+                <li><strong>Rim Stiffness:</strong> Vulnerable to high-impact drops (as seen in testing).</li>
+                <li><strong>Manufacturing Time:</strong> Spikes require manual installation, which is time-consuming for 6 wheels.</li>
+            </ul>
+
+            <h4 class="h5 mt-3">Future Recommendations</h4>
+            <p class="mb-0">
+                The next team should focus on <strong>reinforcing the inner rim</strong> with a composite weave or thicker aluminum gauge to withstand the drop test. Additionally, investigating <strong>molding the spikes directly into the tread</strong> could significantly reduce manufacturing time and part count.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS Animation Engine (Replaced with IntersectionObserver for bi-directional scroll support) -->
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Custom observer to trigger animations when entering/leaving viewport (from top OR bottom)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                } else {
+                    entry.target.classList.remove('aos-animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>

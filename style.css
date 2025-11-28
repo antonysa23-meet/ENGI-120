@@ -1,0 +1,289 @@
+/* Rice University Brand Colors */
+:root {
+    --rice-blue: #00205B;
+    --rice-gray: #7C7E7F;
+    --light-gray-bg: #E0E2E6;
+    --medium-blue: #4D9AD4;
+    --bright-blue: #9FDDF9;
+    --white: #FFFFFF;
+    --off-white: #F9F9F9;
+    --text-dark: #333333;
+}
+
+body {
+    background-color: var(--light-gray-bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--rice-blue);
+}
+
+/* Components */
+.section-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-left: 6px solid var(--rice-blue);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+}
+
+.hero-header {
+    background: var(--rice-blue);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.hero-header h1, .hero-header h2, .hero-header h3, .hero-header p {
+    color: var(--white);
+}
+
+.flowchart-box {
+    border: 2px dashed var(--rice-gray);
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--off-white);
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+/* Idea Cards - Refined for strict uniformity */
+.idea-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+    border-radius: 12px !important;
+    border: 1px solid #eee;
+    background: var(--white);
+    padding: 0; /* No padding on outer container */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps content inside border radius */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.idea-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.idea-card img {
+    width: 100%;
+    height: 220px; /* Fixed height */
+    object-fit: cover; /* Force full coverage */
+    object-position: center;
+    border-radius: 12px 12px 0 0; /* Only top corners rounded */
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.idea-card-body {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.idea-card h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+/* Tables */
+.table-custom {
+    background: var(--white) !important;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.table-custom thead {
+    background-color: var(--rice-blue);
+    color: var(--white);
+}
+
+.table-custom th, .table-custom td {
+    padding: 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.winner {
+    background-color: #d4edda !important;
+    font-weight: bold;
+}
+
+.test-pass {
+    color: green;
+    font-weight: bold;
+}
+
+.test-partial {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Skills Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: var(--rice-blue);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Images */
+.img-fluid-rounded {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* AOS Animation Fixes */
+[data-aos] {
+    transition-duration: 1000ms !important;
+    transition-timing-function: ease-in-out !important;
+}
+
+[data-aos-delay="100"] { transition-delay: 100ms; }
+[data-aos-delay="200"] { transition-delay: 200ms; }
+[data-aos-delay="300"] { transition-delay: 300ms; }
+[data-aos-delay="400"] { transition-delay: 400ms; }
+
+/* Rover Animation */
+#rover-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#rover {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    animation: driveAround 20s linear infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    z-index: 2;
+}
+
+#rover svg {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Wheel Rotation Animation */
+.wheel {
+    animation: rotateWheel 0.8s linear infinite;
+}
+
+.wheel-rear {
+    transform-origin: 20px 45px;
+}
+
+.wheel-middle {
+    transform-origin: 50px 45px;
+}
+
+.wheel-front {
+    transform-origin: 80px 45px;
+}
+
+@keyframes rotateWheel {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Subtle chassis bounce */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* Antenna wobble */
+.antenna {
+    animation: antennaWobble 1.2s ease-in-out infinite;
+    transform-origin: 60px 15px;
+}
+
+@keyframes antennaWobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+}
+
+/* Light pulsing effects */
+.camera-light {
+    animation: lightPulse 2s ease-in-out infinite;
+}
+
+.antenna-light {
+    animation: lightPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes lightPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Smoke Canvas */
+#smoke-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Main rover drive path */
+@keyframes driveAround {
+    /* Start Top-Left, Face Down */
+    0% { left: 0; top: 0; transform: rotate(90deg); }
+
+    /* Move down Left edge */
+    20% { left: 0; top: calc(100vh - 60px); transform: rotate(90deg); }
+    25% { left: 0; top: calc(100vh - 60px); transform: rotate(0deg); } /* Turn */
+
+    /* Move right along Bottom edge */
+    45% { left: calc(100vw - 80px); top: calc(100vh - 60px); transform: rotate(0deg); }
+    50% { left: calc(100vw - 80px); top: calc(100vh - 60px); transform: rotate(-90deg); } /* Turn */
+
+    /* Move up Right edge */
+    70% { left: calc(100vw - 80px); top: 0; transform: rotate(-90deg); }
+    75% { left: calc(100vw - 80px); top: 0; transform: rotate(-180deg); } /* Turn */
+
+    /* Move left along Top edge (Upside down) */
+    95% { left: 0; top: 0; transform: rotate(-180deg); }
+    100% { left: 0; top: 0; transform: rotate(-270deg); } /* Turn back to start */
+}
