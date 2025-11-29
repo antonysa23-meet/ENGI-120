@@ -1,10 +1,10 @@
 /* Rice University Brand Colors */
 :root {
-    --rice-blue: #00205B;
+    --rice-blue: #700101;
     --rice-gray: #7C7E7F;
     --light-gray-bg: #E0E2E6;
-    --medium-blue: #4D9AD4;
-    --bright-blue: #9FDDF9;
+    --medium-blue: #ca0013;
+    --bright-blue: #ff4d5e;
     --white: #FFFFFF;
     --off-white: #F9F9F9;
     --text-dark: #333333;
@@ -16,10 +16,30 @@ body {
     color: var(--text-dark);
 }
 
+/* PDF-specific styles */
+@media print {
+    body {
+        background-color: var(--light-gray-bg);
+    }
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .section-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: 'Cormorant Garamond', serif;
-    color: var(--rice-blue);
+    color: white !important;
+}
+/* Typography */
+h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--rice-blue) !important;
 }
 
 /* Components */
@@ -30,6 +50,35 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
     border-left: 6px solid var(--rice-blue);
     box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.navbar-brand {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.navbar-brand small {
+    font-size: 0.8rem;
+    color: #666;
+}
+.nav-link {
+    color: #ca0013 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #ff4d5e !important;
+}
+.nav-link.active {
+    color: #ca0013 !important;
+    border-bottom: 2px solid #ca0013;
 }
 
 .hero-header {
@@ -40,7 +89,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 12px;
     box-shadow: 0px 6px 25px rgba(0,0,0,0.2);
     margin-bottom: 40px;
-    margin-top: 20px;
 }
 
 .hero-header h1, .hero-header h2, .hero-header h3, .hero-header p {

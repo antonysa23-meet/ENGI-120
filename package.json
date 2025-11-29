@@ -1,0 +1,23 @@
+{
+  "name": "engi-120---copy",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000E\u0000N\u0000G\u0000I\u0000-\u00001\u00002\u00000\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonysa23-meet/ENGI-120.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonysa23-meet/ENGI-120/issues"
+  },
+  "homepage": "https://github.com/antonysa23-meet/ENGI-120#readme",
+  "dependencies": {
+    "puppeteer": "^24.31.0"
+  }
+}
