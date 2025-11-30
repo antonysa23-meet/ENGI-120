@@ -1,4 +1,4 @@
-# Design Blueprint: Team TVC Design Analysis
+# Design Blueprint: Team Wheelders Design Analysis
 
 This document serves as the visual and structural blueprint for the `Design_Analysis.html` page. It incorporates the Rice University (Rice Design Engineering) brand identity to ensure a professional, academic presentation.
 
@@ -42,7 +42,7 @@ The page is organized into distinct, vertically stacked sections.
 -   **Background**: Rice Blue (`#00205B`).
 -   **Text Color**: White (`#FFFFFF`).
 -   **Elements**:
-    -   Top Left: Team TVC Name.
+    -   Top Left: Team Wheelders Name.
     -   Top Right: Client Name (Rice Robotics Club).
     -   Center: "Design Analysis Stage" Title.
     -   Bottom Row: Team Members list, Placeholder for Team Photo/Logo.
