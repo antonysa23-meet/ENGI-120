@@ -65,25 +65,41 @@
         </div>
     </nav>
 
-    <header class="hero-header animate__animated animate__fadeInDown">
-        <h1 class="display-4 fw-bold">Prototype Iteration</h1>
-        <p class="lead">Iterative design and testing of rover wheel prototypes</p>
+    <!-- Header Section -->
+    <header style="margin-top: 50px;" class="hero-header animate__animated animate__fadeInDown text-center" style="padding-top: 20px;">
+        <!-- Logo - Centered at top -->
+        <div class="d-flex justify-content-center mb-4">
+            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center overflow-hidden" style="width: 120px; height: 120px; border: 3px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: -80px;">
+                <img src="../images/logo.png" alt="Team Logo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- Title Section - Centered -->
+        <div class="mb-4" >
+            <h1 class="display-3 fw-bold mb-2">Prototype Iteration</h1>
+            <h2 class="h3 mb-3 text-white">Team Wheelders</h2>
+            <p class="lead mb-0">Rice Robotics Club | University Rover Challenge</p>
+        </div>
+
     </header>
 
-    <!-- Prototyping Section -->
-    <section class="section-card" id="prototyping" data-aos="fade-up">
-        <h2>Prototyping</h2>
+    <!-- Prototyping Overview -->
+    <section class="section-card" id="prototyping-overview" data-aos="fade-up">
+        <h2>Prototyping Overview</h2>
         <p>
             During our prototyping process, we ended up having six key iterations of our design. At the beginning of our prototyping journey, we identified a minimum of three key features: the wheel's axle attachment structure, non-pneumatic tires, and spikes/treads for increased traction.
         </p>
+    </section>
 
-        <h3>Iteration 1 & 2: PLA Low Fidelity Prototypes</h3>
+    <!-- Iteration 1 & 2: PLA Low Fidelity Prototypes -->
+    <section class="section-card" id="iteration-1-2" data-aos="fade-up">
+        <h2>Iteration 1 & 2: PLA Low Fidelity Prototypes</h2>
         <p>
             For our first two iterations, we created a low-fidelity prototype that was both representative and a proof-of-concept. This included making two wheels that were the same in terms of their structure and dimensions but differed in the wheel exterior, either having treads or spikes. We pursued both of these exterior designs in this iteration due to the CAD process for designing these wheels to 3D print being almost a copy-and-paste of each other.
         </p>
 
         <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="PLA Low Fidelity Prototypes" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 300px;">
+            <img src="../images/Iterations/iteration1-2.png" alt="PLA Low Fidelity Prototypes" class="img-fluid border bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 1: PLA Low Fidelity Prototypes (Iteration 1 & 2)</p>
         </div>
 
@@ -92,212 +108,56 @@
         </p>
 
         <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="CAD Technical Drawing" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 300px;">
+            <img src="../images/Iterations/iteration1-2(2).png" alt="CAD Technical Drawing" class="img-fluid border bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 2: CAD Technical Drawing (Iteration 1 & 2)</p>
         </div>
+    </section>
 
-        <h3>Iteration 3: TPU Medium Fidelity Prototype</h3>
+    <!-- Iteration 3: TPU Medium Fidelity Prototype -->
+    <section class="section-card" id="iteration-3" data-aos="fade-up">
+        <h2>Iteration 3: TPU Medium Fidelity Prototype</h2>
         <p>
             In our third iteration, the main goal was to explore the possibility of printing our final design with a TPU exterior and a PLA core structure. To do this, we cut the center structure out of the CAD models from our first iteration and printed just the outside of the wheels. However, we faced challenges in the printing process of this wheel and struggled to get a print that came out with decent quality. Finding the right balance of extruding speed, extruder temperature, and keeping overall print time down proved a difficult task. From this prototype, we saw that the time put into making just this single low-quality wheel was not feasible to scale up and repeat four times in our final design. As a result of this iteration and the first one, we decided to move on to purchasing a pre-existing wheel and modifying it to gain the desired attributes we wanted in our final design.
         </p>
 
         <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="TPU Medium Fidelity Prototype" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 300px;">
+            <img src="../images/Iterations/iteration3.png" alt="TPU Medium Fidelity Prototype" class="img-fluid border bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 3: TPU Medium Fidelity Prototype (Iteration 3)</p>
         </div>
+    </section>
 
-        <h3>Iteration 4: Medium-High Fidelity Prototype</h3>
+    <!-- Iteration 4: Medium-High Fidelity Prototype -->
+    <section class="section-card" id="iteration-4" data-aos="fade-up">
+        <h2>Iteration 4: Medium-High Fidelity Prototype</h2>
         <p>
             In our fourth iteration, we purchased and modified a wheel that met our needed scale and was non-pneumatic. This wheel allowed us to test manufacturing methods on it for our final design, and we also used this wheel to perform our first durability and traction tests since it was at the needed size and just slightly over our goal weight. We modified the existing wheel by drilling holes into the exterior and then fitting the screws of rugby cleat spikes into the holes with adhesive. We tried to excavate some of the rubber from the exterior to make treads, but this proved very difficult given the wheel's hardness. We made a make-shift axle and attached it to the wheel for testing purposes and to check the ease of use of the axle attachment structure. We also began exploring spike layout designs in this prototype, trying to find what would offer us the greatest traction result. Ultimately, this iteration gave us a lot of information, and we realized that we would achieve the most successful final design by using this purchased wheel as a base for further modifications. This showed us that using the spike exterior design would be best moving forward, and we stopped pursuing the idea of treading our wheels. The spikes did have a tendency to fall out, so improving the connection method was needed for higher durability. In the testing of this prototype and meetings with Dr. Holmes and Dr. McGlamery, we saw that these spikes were too large and didn't allow us to maximize surface area with the ground, resulting in less traction. As a result, we purchased more of these wheels and continued modifying them, but with different spikes, and we manipulated the spike layout.
         </p>
 
         <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="Medium-High Fidelity Prototype" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 300px;">
+            <img src="../images/Iterations/iteration4.png" alt="Medium-High Fidelity Prototype" class="img-fluid border bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 4: Medium-High Fidelity Prototype (Iteration 4)</p>
         </div>
+    </section>
 
-        <h3>Iteration 5 & 6: High Fidelity Prototypes</h3>
+    <!-- Iteration 5 & 6: High Fidelity Prototypes -->
+    <section class="section-card" id="iteration-5-6" data-aos="fade-up">
+        <h2>Iteration 5 & 6: High Fidelity Prototypes</h2>
         <p>
-            In our fifth and sixth iterations, we used the same wheel from iteration 4, but used track spikes instead of rugby cleats, and we varied the spike layout. In attaching the spikes, we precisely measured out the distances between each spike and used precise drilling and adhesive to ensure a high-quality and strong attachment for each spike. We used a fresh set of wheels as well to ensure that the tread excavation on the wheel from iteration 4 wouldn't lower the quality of these iterations. In our testing, we saw that these wheels performed the same in terms of traction, but iteration 6 performed better in durability and replicability. Due to this, we selected iteration 6 as our final prototype. This model has our three key features: wheel axle attachment structure, non-pneumatic tires, and spikes/treads for increased traction. It performed best in most of our tests and met all of our clients' requirements. We made sure to make this iteration with sourcing the highest quality parts, and we took time to accurately place and secure all of the spikes. Ultimately, at the end of this process, we have created a prototype that incorporates all the elements we sought at the beginning, and performs above our target goal in our most important criterion, traction. All the features and the high performance of this recent iteration were made possible as a result of the systematic iterative process.
+            In our fifth and sixth iterations, we used the same wheel from iteration 4, but used track spikes instead of rugby cleats, and we varied the spike layout. In attaching the spikes, we precisely measured out the distances between each spike and used precise drilling and adhesive to ensure a high-quality and strong attachment for each spike. We used a fresh set of wheels as well to ensure that the tread excavation on the wheel from iteration 4 wouldn't lower the quality of these iterations. In our testing, we saw that these wheels performed the same in terms of traction, but iteration 6 performed better in durability and replicability.
         </p>
 
         <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="High Fidelity Prototypes" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 300px;">
+            <img src="../images/Iterations/iteration5-6.png" alt="High Fidelity Prototypes" class="img-fluid border bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 5: High Fidelity Prototypes (Iteration 5 & 6)</p>
         </div>
     </section>
 
-    <!-- Testing Section -->
-    <section class="section-card" id="testing" data-aos="fade-up">
-        <h2>Testing</h2>
+    <!-- Final Prototype Selection -->
+    <section class="section-card" id="final-selection" data-aos="fade-up">
+        <h2>Final Prototype Selection</h2>
         <p>
-            Testing for our rover wheel prototype required five major evaluations: traction, durability, replicability, weight measurement, and size measurement. Across the project, we tested three to scale, progressively improved prototypes:
+            Due to this, we selected iteration 6 as our final prototype. This model has our three key features: wheel axle attachment structure, non-pneumatic tires, and spikes/treads for increased traction. It performed best in most of our tests and met all of our clients' requirements. We made sure to make this iteration with sourcing the highest quality parts, and we took time to accurately place and secure all of the spikes. Ultimately, at the end of this process, we have created a prototype that incorporates all the elements we sought at the beginning, and performs above our target goal in our most important criterion, traction. All the features and the high performance of this recent iteration were made possible as a result of the systematic iterative process.
         </p>
-        <ul>
-            <li>Solid Rubber Wheel With Rugby Spikes (Iteration 4)</li>
-            <li>Solid Rubber Wheel With Metal Track Spikes Arranged in Rows (Iteration 5)</li>
-            <li>Solid Rubber Wheel With Alternating Metal Track Spikes (Iteration 6)</li>
-        </ul>
-        <p>The second and third prototypes (Iteration 5 & 6) are the designs that were improved from the first one, incorporating insights from the first testing round.</p>
-
-        <h3>Testing Methods</h3>
-
-        <h4>Traction Test</h4>
-        <p>
-            To measure traction on sandy terrain that simulates the Mars landform, we placed the wheel assembly on a wooden board covered with sand. The ramp angle was increased incrementally by inserting wooden blocks of different heights under one end of the board. The wheel assembly was tested at degrees of 6, 10, 12, 15, and 20. Using the measured mass of 3.40 kg (weight ≈ 33.34 N), the frictional force at each angle was calculated using the equation F=Wsinθ. Thus, the traction forces for all the angles were:
-        </p>
-        <ul>
-            <li>6 degrees: 3.48 N</li>
-            <li>10 degrees: 5.79 N</li>
-            <li>12 degrees: 6.93 N</li>
-            <li>15 degrees: 8.63 N</li>
-            <li>20 degrees: 11.40 N</li>
-        </ul>
-
-        <h4>Durability Test</h4>
-        <p>
-            To evaluate resistance to impact and spike retention, the wheel was dropped from increasing heights of 10, 20, 30, 40, and 50 inches onto a gravel surface. Any cracks, spike detachment, or structural failures indicates the failure threshold.
-        </p>
-
-        <h4>Replicability Test</h4>
-        <p>
-            To evaluate the replicability, we removed all spikes from the third prototype and reinstalled them into the same drilled holes, timing how long a full reassembly would take.
-        </p>
-
-        <h4>Weight and Size Measurement</h4>
-        <p>
-            Weight was recorded using a scale, and diameter was measured with a tape measure to ensure consistency across prototypes.
-        </p>
-
-        <h3>Intermediate Prototype Testing</h3>
-        <p>
-            The first prototype (Iteration 4) used rubber rugby spikes in an alternating pattern. Traction tests showed stability up to 15°, with slipping beginning at around 16°. Durability performance was more limited: rubber spikes showed visible deformation at 30 inches and began detaching at 40 inches. This result revealed that while the design with rubber spikes offered acceptable traction, its durability was insufficient for a rover that might drop from a relatively large height. The wheel pair weighed 7.5 pounds (3.40 kg) and measured 8.5 inches in diameter. These results motivated two major design changes: replacing rubber spikes with metal track spikes and improving the drilling on the rubber tire and use of adhesive to better secure the spikes.
-        </p>
-
-        <h3>Final Prototype Testing</h3>
-        <p>
-            The second and third prototypes (Iteration 5 & 6) used metal track spikes, differing only in spike distribution on row and alternating. Both wheels were mounted together on a single axle during the testing, and each test was repeated three times for precision. In the traction test, both wheels remained stable at all tested angles up to 20°. Slipping began immediately after the threshold of 20°.
-        </p>
-        <p>
-            Durability tests demonstrated a significant improvement over the first prototype with rubber rugby spikes. Both metal-spike wheels survived drops up to 50 inches without spike detachment. Although there were no spikes that fell out, several became loosened, indicating that the adhesive and the drilling attachment method were not fully secure under repeated impacts. Metal spikes also exhibited surface wear, but they distributed impact forces more effectively than the rubber spikes due to their smaller size and larger number of ground-contact points. Weight and size remained nearly identical to the first prototype. For replicability, the measured time was 6 minutes 50 seconds.
-        </p>
-
-        <div class="text-center mb-4">
-            <img src="../images/placeholder.jpg" alt="Friction Force Chart" class="img-fluid-rounded border bg-white p-1 mb-2" style="max-height: 400px;">
-            <p class="text-muted fst-italic">Chart 1: Friction Force of Test Wheels vs. Angle (Iteration 4, 5, 6)</p>
-        </div>
-
-        <h3>How Results Inform Future Work</h3>
-        <p>
-            The two sets of testing confirmed that the prototype meets our traction and durability goals, but also highlighted some limitations. Future improvements will focus on three parts:
-        </p>
-        <ul>
-            <li>Strengthening the spike attachment such as using stronger adhesives or mechanical fastening</li>
-            <li>Improving spike material hardness</li>
-            <li>Selecting wheels reinforced with additives like carbon black or silica for better wear resistance</li>
-        </ul>
-    </section>
-
-    <!-- Project Hand-off & Conclusion -->
-    <section class="section-card" id="conclusion" data-aos="fade-up">
-        <h2>Project Hand-off & Conclusion</h2>
-        <p>
-            Throughout the design analysis stage, we were able to gain a greater understanding of the problems we needed to solve, and we gained foundational knowledge in wheel design and creation. Through our research, we identified several factors that impact wheel performance in extreme terrain, and we discovered previous University Rover Challenge wheel designs that had been successful for previous teams, such as using pre-made rubber wheels with either a spike or tread exterior design.
-        </p>
-        <p>
-            After exploring some important factors that we identified in our research, we made a set of design criteria to guide our brainstorming of an idea that we felt could become our final prototype. In the brainstorming process, we generated over 60 complete potential solutions and identified the most viable concept using Pugh scoring and screening matrices.
-        </p>
-        <p>
-            The prototyping stage of the design process consisted of several iterations that built on each other, improving quality, functionality, test results, and adherence to our design criteria as we developed a better understanding of what worked well and what didn't with each prototype. Initial prototypes focused on representing and integrating our different features and following iterations explored manufacturing methods and were improved through use of more quality materials, purchased base wheels, and small modifications based on our observations.
-        </p>
-        <p>
-            As a team we hope that our wheel design will aid Rice Robotics in having a good performance in their first ever appearance in the University Rover Challenge. At this point in our process we have transitioned to handing off our project. All relevant documents, prototypes, and testing data will be physically handed off or emailed to our client by Dec 31st, 2025. Any further communication regarding our project should be directed to our client Rice Robotics at riceroboticsclub@gmail.com or our main point of contact at Rice's Robotics team, Ryan Purdy, rpp6@rice.edu.
-        </p>
-    </section>
-
-    <!-- References -->
-    <section class="section-card" id="references" data-aos="fade-up">
-        <h2>References</h2>
-        <ul class="small text-muted" style="list-style-type: none; padding-left: 0;">
-            <li class="mb-2">Figure 1: Cornell Mars Rover Project Team. "URC Terrain Traverse Goals 1 and 2." YouTube, YouTube, www.youtube.com/watch?v=-yzIbqasAgE. Accessed 24 Sept. 2025.</li>
-            <li class="mb-2">Figure 2: Own Work - Luke Van Leeuwen, taken 9/4/2025</li>
-            <li class="mb-2">Table 1: Design Criteria Table with eight criteria</li>
-            <li class="mb-2">[1] Mars Rover Design Team, Talos. Missouri S&T, 2025.</li>
-            <li class="mb-2">[2] The Mars Society, University Rover Challenge, Oklahoma University.</li>
-            <li class="mb-2">[3] BYU Mechanical Engineering, BYU Mars Rover. BYU, 2023.</li>
-            <li class="mb-2">[4] A. Rankin, N. Patel, E. Graser, J. Freddy Wang, K.Rink, Assessing Mars Curiosity Rover Wheel Damage. Jet Propulsion Laboratory, California Institute of Technology, 2022.</li>
-            <li class="mb-2">[5] NASA, Mars 2020: Perseverance Rover – Wheels and Legs, Jet Propulsion Laboratory, California Institute of Technology, Jul. 22, 2025.</li>
-            <li class="mb-2">[6] S. Lilly, NASA Sets Sights on Mars Terrain with Revolutionary Tire Tech. NASA, 2025.</li>
-            <li class="mb-2">[7] BYU College of Engineering, "Mars Rover Team places 3rd at University Rover Challenge," BYU Engineering News, Jun. 27, 2024.</li>
-            <li class="mb-2">[8] T. Impassability (Cal Poly team), "ME 2023 F56 FDR" (team Final Design Report — notes wheel replacement due to PLA wheel traction/durability issues), Cal Poly DigitalCommons, 2023.</li>
-            <li class="mb-2">[9] "Requirements & Guidelines," University Rover Challenge. [Online]. Available: https://urc.marssociety.org/home/requirements-guidelines. [Accessed: 11-Sep-2025]</li>
-            <li class="mb-2">[10] Balakina, Ekaterina & Lipatov, Evgeniy & Sarbayev, D. (2020). Advantages of Using Wheel Rolling Radius for Calculating Friction Characteristics in Wheel-to-Road Contact Patch. 10.1007/978-3-030-22041-9_107.</li>
-            <li class="mb-2">[11] R. He et al., "Updated Standards of the International Society for Terrain-Vehicle Systems," Journal of Terramechanics, vol. 91, pp. 185–231, Oct. 2020, doi: https://doi.org/10.1016/j.jterra.2020.06.007.</li>
-        </ul>
-    </section>
-
-    <!-- Appendix -->
-    <section class="section-card" id="appendix" data-aos="fade-up">
-        <h2>Appendix</h2>
-
-        <h3>Interview Questions & Answers</h3>
-        <p>[Interview content would go here]</p>
-
-        <h3>Contributions</h3>
-        <p>[Contributions content would go here]</p>
-
-        <h3>Sources Used in Research</h3>
-        <ul>
-            <li>A. Rankin, N. Patel, E. Graser, J. Freddy Wang, K.Rink, Assessing Mars Curiosity Rover Wheel Damage. Jet Propulsion Laboratory, California Institute of Technology, 2022.</li>
-            <li>NASA, Mars 2020: Perseverance Rover – Wheels and Legs, Jet Propulsion Laboratory, California Institute of Technology, Jul. 22, 2025.</li>
-            <li>S. Lilly, NASA Sets Sights on Mars Terrain with Revolutionary Tire Tech. NASA, 2025</li>
-            <li>Rover, Osurobotics. Club, 2017. https://osurobotics.club/teams/rover/ (accessed Sep. 11, 2025).</li>
-            <li>Sooner Rover Team, Ou.edu, 2024. https://ou.edu/soonerrover/ (accessed Sep. 11, 2025).</li>
-            <li>University Rover Challenge Team | Home, Wvu.edu, 2024. https://urc.orgs.wvu.edu/ (accessed Sep. 11, 2025)</li>
-            <li>M.A. Elsheikh, Design of a special rigid wheel for traversing loose soil, Scientific Reports, 2023. https://www.nature.com/articles/s41598-022-27312-6</li>
-            <li>J. Ding, A. Moussa, H. Li, Slip-Based Traction Control of a Planetary Rover, Springer Lecture Notes in Control and Information Sciences, 2006. https://link.springer.com/chapter/10.1007/3-540-36268-1_59</li>
-            <li>I. Pinto and Z. Gan, Design and fabrication of a Mars rover four-wheel rocker system, 2025 Regional Student Conferences, 2025.Online]. Available: https://arc.aiaa.org/doi/10.2514/6.2025-94707.</li>
-            <li>Requirements & Guidelines, University Rover Challenge. [Online]. Available: https://urc.marssociety.org/home/requirements-guidelines. (Accessed: 11-Sep-2025)</li>
-            <li>Mars Rover Design Team, Talos. Missouri S&T, 2025.</li>
-            <li>The Mars Society, University Rover Challenge, Oklahoma University.</li>
-            <li>BYU Mechanical Engineering, BYU Mars Rover. BYU, 2023.</li>
-            <li>Balakina, Ekaterina & Lipatov, Evgeniy & Sarbayev, D. (2020). Advantages of Using Wheel Rolling Radius for Calculating Friction Characteristics in Wheel-to-Road Contact Patch. 10.1007/978-3-030-22041-9_107.</li>
-            <li>R. He et al., Updated Standards of the International Society for Terrain-Vehicle Systems, Journal of Terramechanics, vol. 91, pp. 185–231, Oct. 2020, doi: https://doi.org/10.1016/j.jterra.2020.06.007.</li>
-            <li>Q. Michalski, D. Downing, M. Leary, J. Dash, M. Watson, R. Das, P. Jessadatavornwong, J. Kenrick, K. Doyle, B. Nichols, G.E. Dorrington, Lunar Wheel Design Optimisation. RMIT University, Lunar Outpost Oceania, RocketLab, 2019. ISBN: 978-1-925627-90-9.</li>
-            <li>Mars Rover Design Team, Mars Rover Design Team, 2025. https://marsrover.mst.edu/ (accessed Sep. 14, 2025).</li>
-            <li>University Rover Challenge Team | Home, Wvu.edu, 2024. https://urc.orgs.wvu.edu/ (accessed Sep. 14, 2025).</li>
-            <li>Team Info, Team Info, Marssociety.org, 2025. https://urc.marssociety.org/home/team-info (accessed Sep. 14, 2025).</li>
-            <li>BYU College of Engineering, Mars Rover Team places 3rd at University Rover Challenge, BYU Engineering News, Jun. 27, 2024.</li>
-            <li>T. Impassability (Cal Poly team), ME 2023 F56 FDR (team Final Design Report — notes wheel replacement due to PLA wheel traction/durability issues), Cal Poly DigitalCommons, 2023.</li>
-            <li>M. Zou, Y. Gao, Z. Zhan, J. Zhang, and S. Li, Design and mechanical behavior evaluation of flexible metal wheels for crewed lunar rovers, Acta Astronautica, vol. 177, pp. 659–670, 2020. doi: 10.1016/j.actaastro.2020.08.001.</li>
-            <li>J. Zeng, Z. Chen, Q. Jin, and Q. Ma, A comprehensive review on non-pneumatic tyre research, Materials & Design, vol. 227, p. 111661, Mar. 2023. doi: 10.1016/j.matdes.2023.111661.</li>
-            <li>F. Rashid, M. A. Hossain, M. M. Rahman, and A. H. M. S. Iqbal, Design, simulation, and manufacture of wheel for human exploration rover, in Proc. Int. Conf. Mechanical, Industrial and Materials Engineering (ICMIME), Rajshahi Univ. of Eng. & Tech., Rajshahi, Bangladesh, Dec. 2019, pp. 1–6.</li>
-            <li>Utah State University, USU URC Adventure Rover, Senior Design Projects, Mechanical & Aerospace Engineering, 2023. [Online]. Available: https://engineering.usu.edu/mae/students/senior-projects/fall2022-spring2023/projects/usu-urc-adventure-rover.php</li>
-            <li>BU Mars Rover Team, BU Mars Rover Team: Rover Development, Gilbert's Webpage Blog, 2023. [Online]. Available: https://www.gilbertswebpage.com/post/bu-mars-rover-team-rover</li>
-            <li>Mars Rover Design Team, Talos. Missouri S&T, 2025.</li>
-            <li>URC2025 Scores, University Rover Competition, The Mars Society, 2022</li>
-            <li>Our Rover, ARES 8, Tohoku University, 2025.</li>
-            <li>URC2025 Scores, URC2025 Scores, Marssociety.org, 2025. https://urc.marssociety.org/home/about-urc/urc2025-scores (accessed Sep. 14, 2025).</li>
-            <li>Y. Rover, Yıldız Rover | YTU Interdisciplinary Robotics Team, Yildiz.edu.tr, Sep. 17, 2019. https://rover.yildiz.edu.tr/ (accessed Sep. 14, 2025).</li>
-            <li>Yonder Dynamics, Yonderdynamics.org, 2025. https://yonderdynamics.org/#/ (accessed Sep. 14, 2025).</li>
-            <li>SimpleTire, "Understanding tire compounds: How different materials impact performance," SimpleTire, Jul. 10, 2025. https://simpletire.com/learn/tire-news-information/understanding-tire-compounds?srsltid=AfmBOorERbbcH0nVy18juTCGBdufM3uVaXtLinOygHIjsEbIdub-mWXX</li>
-            <li>S. Team, "Flexible PLA vs. TPU: Which Filament is Right for Your Project?," Snapmaker Official Blog, Oct. 03, 2025. https://www.snapmaker.com/blog/flexible-pla-vs-tpu/</li>
-            <li>Factory Monster, "Amazing process of making retreaded tire with old tires. tire recycling factory in Korea," YouTube. Aug. 31, 2023. [Online]. Available: https://www.youtube.com/watch?v=FOLxhT74Vxg</li>
-            <li>Matthew Backhouse, "MICHELIN retreading process," YouTube. May 19, 2020. [Online]. Available: https://www.youtube.com/watch?v=udSUYURoDUc</li>
-            <li>J. Xiao and Y. Gao, "The manufacture of 3D printing of medical grade TPU - progress in additive manufacturing," SpringerLink, https://link.springer.com/article/10.1007/s40964-017-0023-1 (accessed Dec. 7, 2025).</li>
-        </ul>
-
-        <h3>Additional Required Sections</h3>
-        <ul>
-            <li><strong>Technical Drawings – CAD files:</strong> CAD files are available in the team shared drive</li>
-            <li><strong>Expenditures:</strong> [Expenditures content would go here]</li>
-            <li><strong>Electrical Schematics:</strong> Schematics are available in the team shared drive</li>
-            <li><strong>Bill of Materials:</strong> [BOM content would go here]</li>
-            <li><strong>Code:</strong> Documented code is available in the team shared drive</li>
-            <li><strong>Detailed Testing Plan and Results:</strong> See testing section above</li>
-            <li><strong>Assembly Instructions:</strong> [Assembly instructions would go here]</li>
-            <li><strong>Operating Instructions:</strong> [Operating instructions would go here]</li>
-        </ul>
     </section>
 
 </div>
