@@ -52,7 +52,7 @@
                             <li><a class="dropdown-item" href="About_Antony.html">Antony Saleh</a></li>
                             <li><a class="dropdown-item" href="About_Luke.html">Luke Van Leeuwen</a></li>
                             <li><a class="dropdown-item" href="About_Connor.html">Connor Gumbs</a></li>
-                            <li><a class="dropdown-item" href="About_Hong.html">Hong Guo</a></li>
+                            <li><a class="dropdown-item" href="About_Hong.html">Hongyu Guo</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="Team_Pitstop.html">Team Pitstops</a></li>
@@ -431,10 +431,7 @@
 
         <div class="text-center mb-4">
             <h4>Final Refined Prototype</h4>
-            <!-- Placeholder for final refined prototype photo -->
-            <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto border rounded mb-2" style="width: 100%; height: 300px;">
-                <p class="text-muted mb-0">[Final refined prototype photo placeholder]</p>
-            </div>
+            <img src="../images/DS_images/finalWheels.png" alt="Final Refined Prototype" class="img-fluid rounded border bg-white p-2 mb-2" style="max-width: 100%; max-height: 400px;">
             <p class="text-muted fst-italic">Figure 6: Final refined prototype</p>
         </div>
     </section>
@@ -452,6 +449,68 @@
         <p>
             The video demonstrates the wheel's ability to deform slightly over obstacles (dampening impact) while the metal spikes engage with the loose terrain to provide forward thrust.
         </p>
+    </section>
+
+    <!-- Testing Table -->
+    <section class="section-card" id="testing-table" data-aos="fade-up">
+        <h2>Testing Table</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-danger">
+                    <tr>
+                        <th style="vertical-align: middle;">Design Criteria and Target Value</th>
+                        <th style="vertical-align: middle;">Category of Test</th>
+                        <th style="vertical-align: middle;">How will the measurement be made?</th>
+                        <th style="vertical-align: middle;">How many times will the test be repeated?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Traction</strong> - Be able to scale a 6-20 degree sandy hill</td>
+                        <td style="vertical-align: middle;">Constructed - Surrogate</td>
+                        <td style="vertical-align: middle;">Put the rover wheel on an inclined plane covered by sand to simulate sandy terrain. Adjust the plane between 6-20 degrees and see if the static friction forces can hold the wheel on the inclined plane.</td>
+                        <td style="vertical-align: middle;">5 times</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Durability</strong> - withstand a continued load of 60kg for a hour</td>
+                        <td style="vertical-align: middle;">Constructed - Direct</td>
+                        <td style="vertical-align: middle;">Drop the wheels from various heights (Impact Testing from 10 to 50 inches increments of 10 inches)</td>
+                        <td style="vertical-align: middle;">3 times per height</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Replicability</strong> - can construct a set of wheels within a week</td>
+                        <td style="vertical-align: middle;">Standard - Surrogate</td>
+                        <td style="vertical-align: middle;">Time it takes to 3D print a set of 4 wheels</td>
+                        <td style="vertical-align: middle;">1 time</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Replaceability</strong> - takes less than a minute to change 1 wheel out</td>
+                        <td style="vertical-align: middle;">Standard - Surrogate</td>
+                        <td style="vertical-align: middle;">Measure the time taken (Using a stopwatch) to replace the wheel.</td>
+                        <td style="vertical-align: middle;">Conduct 20 runs.</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Weight</strong> - target .8kg</td>
+                        <td style="vertical-align: middle;">Standard - Direct</td>
+                        <td style="vertical-align: middle;">Use a scale to find the weight of each individual wheel.</td>
+                        <td style="vertical-align: middle;">3 times</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Size</strong> - 125mm</td>
+                        <td style="vertical-align: middle;">Standard - Direct</td>
+                        <td style="vertical-align: middle;">Use a calliper to measure the diameter and width of each individual wheel.</td>
+                        <td style="vertical-align: middle;">3 times</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;"><strong>Coolness</strong> - design stands out</td>
+                        <td style="vertical-align: middle;">Constructed - Surrogate</td>
+                        <td style="vertical-align: middle;">User-defined scale, done by some of the rice robotic students and some by random people.</td>
+                        <td style="vertical-align: middle;">The goal is 25 people.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <!-- Testing -->
@@ -502,24 +561,19 @@
 
     <!-- Conclusion -->
     <section class="section-card" id="conclusion" data-aos="fade-up">
-        <h2>Project Status & Next Steps</h2>
-        <div class="bg-light p-4 rounded border-start border-5 ">
-            <h3>Summary</h3>
-            <p>
-                Team Wheelders has successfully designed and prototyped a hybrid rubber-metal wheel that meets the primary traction and weight criteria for the URC. The "Rubber with Metal Spikes" concept outperformed complex mechanical alternatives in reliability and ease of repair.
-            </p>
-            
-            <h4 class="h5 mt-3">Limitations</h4>
-            <ul>
-                <li><strong>Rim Stiffness:</strong> Vulnerable to high-impact drops (as seen in testing).</li>
-                <li><strong>Manufacturing Time:</strong> Spikes require manual installation, which is time-consuming for 6 wheels.</li>
-            </ul>
+        <h2>Project Hand-off & Conclusion</h2>
 
-            <h4 class="h5 mt-3">Future Recommendations</h4>
-            <p class="mb-0">
-                The next team should focus on <strong>reinforcing the inner rim</strong> with a composite weave or thicker aluminum gauge to withstand the drop test. Additionally, investigating <strong>molding the spikes directly into the tread</strong> could significantly reduce manufacturing time and part count.
-            </p>
-        </div>
+        <p>
+            Throughout the design analysis stage, we gained a greater understanding of wheel design challenges and identified successful URC wheel patterns, such as pre-made rubber wheels with spike or tread exteriors. We developed design criteria to guide our brainstorming, generating over 60 potential solutions and selecting the most viable concept through Pugh scoring.
+        </p>
+
+        <p>
+            Our prototyping process involved multiple iterations that progressively improved quality, functionality, and adherence to design criteria through better materials and manufacturing methods. Initial prototypes focused on feature integration, while later iterations explored manufacturing techniques and incorporated purchased base wheels with modifications.
+        </p>
+
+        <p>
+            As a team, we hope our wheel design will contribute to Rice Robotics' success in their first University Rover Challenge appearance. We have now transitioned to project hand-off, with all relevant documents, prototypes, and testing data to be delivered to our client by December 31st, 2025. For further communication regarding this project, please contact Rice Robotics at riceroboticsclub@gmail.com or our main point of contact, Ryan Purdy (rpp6@rice.edu).
+        </p>
     </section>
 
 </div>
