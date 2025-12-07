@@ -42,12 +42,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- <li class="nav-item"><a class="nav-link" href="About_Me.html">About Me</a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link" href="Team_Pitstop.html">Team Pitstop</a></li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                            <li><a class="dropdown-item" href="About_Us.html">Team Overview</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="About_Antony.html">Antony Saleh</a></li>
+                            <li><a class="dropdown-item" href="About_Luke.html">Luke Van Leeuwen</a></li>
+                            <li><a class="dropdown-item" href="About_Connor.html">Connor Gumbs</a></li>
+                            <li><a class="dropdown-item" href="About_Hong.html">Hong Guo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Team_Pitstop.html">Team Pitstops</a></li>
                     <li class="nav-item"><a class="nav-link" href="Design_Analysis.html">Design Analysis Stage</a></li>
                     <li class="nav-item"><a class="nav-link active" href="Design_Solution.html">Design Solution Stage</a></li>
                     <li class="nav-item"><a class="nav-link" href="Prototype_Iteration.html">Prototype Iteration</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="Communication.html">Communication</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="Communication.html">Communication</a></li>
                 </ul>
             </div>
         </div>
@@ -139,6 +151,78 @@
                 </div>
             </div>
         </div>
+
+        <h3>Top 8 Design Ideas</h3>
+        <div class="text-center my-4" data-aos="zoom-in">
+            <img src="../images/DS_images/Top_8_ideas.png" alt="Top 8 Design Ideas" class="img-fluid rounded border bg-white p-2" style="max-width: 100%; max-height: 500px;">
+        </div>
+
+        <div class="row g-3 mt-3">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch a</h5>
+                        <p class="card-text small">Metal skeleton wheel with metal spikes and a rubber outside</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch b</h5>
+                        <p class="card-text small">Laser cut rubber wheel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch c</h5>
+                        <p class="card-text small">Metal star shaped wheel with flattened rubber ends</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch d</h5>
+                        <p class="card-text small">Polycarbonate resin printed wheel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch e</h5>
+                        <p class="card-text small">3D printed rubber wheel with tire treads</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch f</h5>
+                        <p class="card-text small">Rubber wheel with metal spikes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch g</h5>
+                        <p class="card-text small">Circular inner part wheel with ridged rubber grousers on outside</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title h6 fw-bold">Sketch h</h5>
+                        <p class="card-text small">Resin printed rubber wheel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Design Selection (Pugh Matrix) -->
@@ -150,87 +234,160 @@
 
         <div class="table-responsive">
             <table class="table table-custom table-bordered text-center">
-                <thead>
+                <thead class="small">
                     <tr>
                         <th>Design Criteria</th>
                         <th>Weight</th>
-                        <th>Rubber w/ Spikes (Winner)</th>
-                        <th>Metal Skeleton</th>
-                        <th>Resin + Polycarb</th>
-                        <th>Metal Star</th>
+                        <th>a. Metal skeleton wheel with metal spikes and rubber outside</th>
+                        <th>b. Laser cut rubber wheel</th>
+                        <th>c. Metal star shaped wheel with flattened rubber ends</th>
+                        <th>d. Polycarbonate resin printed wheel</th>
+                        <th>e. 3D printed rubber wheel with tire treads</th>
+                        <th>f. Rubber wheel with metal spikes</th>
+                        <th>g. Circular inner part wheel with ridged rubber grousers on outside</th>
+                        <th>h. Resin printed rubber wheel</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Traction</td>
                         <td>25%</td>
-                        <td class="winner">5 (1.25)</td>
-                        <td>5 (1.25)</td>
-                        <td>2 (0.5)</td>
-                        <td>4 (1.0)</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td class="winner">3</td>
+                        <td class="winner">5</td>
+                        <td>4</td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td>Durability</td>
                         <td>25%</td>
-                        <td class="winner">3 (0.75)</td>
-                        <td>3 (0.75)</td>
-                        <td>4 (1.0)</td>
-                        <td>3 (0.75)</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td class="winner">4</td>
+                        <td class="winner">3</td>
+                        <td>3</td>
+                        <td>4</td>
                     </tr>
                     <tr>
                         <td>Replicability</td>
                         <td>20%</td>
-                        <td class="winner">3 (0.6)</td>
-                        <td>2 (0.4)</td>
-                        <td>4 (0.8)</td>
-                        <td>3 (0.6)</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td class="winner">4</td>
+                        <td class="winner">3</td>
+                        <td>3</td>
+                        <td>4</td>
                     </tr>
                     <tr>
                         <td>Replaceability</td>
                         <td>15%</td>
-                        <td class="winner">5 (0.75)</td>
-                        <td>4 (0.6)</td>
-                        <td>5 (0.75)</td>
-                        <td>3 (0.45)</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td class="winner">5</td>
+                        <td class="winner">5</td>
+                        <td>5</td>
+                        <td>5</td>
                     </tr>
                     <tr>
                         <td>Weight</td>
                         <td>5%</td>
-                        <td class="winner">3 (0.15)</td>
-                        <td>3 (0.15)</td>
-                        <td>4 (0.2)</td>
-                        <td>4 (0.2)</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td class="winner">5</td>
+                        <td class="winner">3</td>
+                        <td>3</td>
+                        <td>4</td>
                     </tr>
                     <tr>
                         <td>Size</td>
                         <td>5%</td>
-                        <td class="winner">5 (0.25)</td>
-                        <td>4 (0.2)</td>
-                        <td>3 (0.15)</td>
-                        <td>4 (0.2)</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td class="winner">2</td>
+                        <td class="winner">5</td>
+                        <td>4</td>
+                        <td>3</td>
                     </tr>
                     <tr>
-                        <td>Coolness</td>
+                        <td>Cool</td>
                         <td>5%</td>
-                        <td class="winner">3 (0.15)</td>
-                        <td>4 (0.2)</td>
-                        <td>2 (0.1)</td>
-                        <td>5 (0.25)</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td class="winner">3</td>
+                        <td class="winner">3</td>
+                        <td>3</td>
+                        <td>2</td>
                     </tr>
                     <tr class="table-primary fw-bold">
-                        <td>TOTAL SCORE</td>
+                        <td>Weighted Total Score</td>
                         <td>100%</td>
-                        <td>3.90 (Rank 1)</td>
-                        <td>3.55 (Rank 4)</td>
-                        <td>3.50 (Rank 5)</td>
-                        <td>3.45 (Rank 6)</td>
+                        <td>3.55</td>
+                        <td>3.5</td>
+                        <td>3.45</td>
+                        <td>3.5</td>
+                        <td class="winner">3.8</td>
+                        <td class="winner">3.9</td>
+                        <td>3.6</td>
+                        <td>3.5</td>
+                    </tr>
+                    <tr class="table-secondary fw-bold">
+                        <td colspan="2">Rank</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td class="winner">2</td>
+                        <td class="winner">1</td>
+                        <td>3</td>
+                        <td>5</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
         <div class="alert alert-success mt-3">
-            <strong>Winning Concept: Rubber Wheel with Metal Spikes.</strong> This design scored highest (3.9/5.0) because it balanced superior traction (essential for the 30° slope) with high scores in replaceability. Although simpler than the "Metal Star," it offered a more reliable and manufacturable solution for the team's timeline.
+            <strong>Top Two Winning Concepts:</strong> Our evaluation revealed two exceptional designs that significantly outperformed the competition, both achieving scores above 3.8/5.0.
+
+            <strong>Primary Winner: Rubber Wheel with Metal Spikes (3.9/5.0 - Rank #1)</strong><br>
+            This hybrid design emerged as the clear champion through its optimal balance of critical performance factors that directly address the URC Delivery Mission requirements.
+
+            <strong>Why This Design Excels:</strong>
+            <ul class="mb-3 mt-2">
+                <li><strong>Superior Traction (25% weight):</strong> Perfect 5/5 rating for handling the 30° slopes and loose terrain that characterize Mars-like conditions</li>
+                <li><strong>Quick Replaceability (15% weight):</strong> Top 5/5 score enables field repairs in under 1 minute, crucial during competition</li>
+                <li><strong>Size Optimization (5% weight):</strong> Perfect 5/5 fit for the 9.5-inch requirement while maintaining maneuverability</li>
+                <li><strong>Balanced Performance:</strong> Strong scores across durability (3/5), replicability (3/5), and weight (3/5) ensure reliability without excessive complexity</li>
+            </ul>
+
+            <strong>Secondary winner: 3D Printing + Only Rubber Wheel + Tire Treads (3.8/5.0 - Rank #2)</strong><br>
+            This all-rubber design also performed exceptionally well, offering excellent traction and manufacturing advantages.
+
+            <strong>Why This Design Performed Strongly:</strong>
+            <ul class="mb-3 mt-2">
+                <li><strong>Outstanding Weight Performance (5% weight):</strong> Perfect 5/5 score for minimal weight impact on the 50kg rover</li>
+                <li><strong>High Traction (25% weight):</strong> Strong 3/5 rating for challenging terrain with tire tread patterns</li>
+                <li><strong>Excellent Replicability (20% weight):</strong> Top 4/5 score due to simple 3D printing construction</li>
+                <li><strong>Good Replaceability (15% weight):</strong> Strong 5/5 rating for easy field replacement</li>
+            </ul>
+
+            <strong>Final Selection Rationale:</strong> While both designs exceeded our expectations, the Rubber Wheel with Metal Spikes was ultimately selected as the primary winner due to its slightly superior traction performance and proven track record of metal-rubber hybrid designs in URC competitions. However, the 3D printed tire tread design remains a strong alternative that could be reconsidered if manufacturing constraints change.
+
+            <strong>Solving the Client's Problem:</strong> Both winning designs address the Rice Robotics Club's core needs: wheels that support a 50kg rover through steep inclines, sand, and rocky terrain while being quickly replaceable during competition. The hybrid winner provides the optimal combination of rubber traction for grip and metal spikes for durability, ensuring the rover can complete the URC Delivery Mission successfully while meeting all regulatory constraints.
         </div>
     </section>
 
@@ -238,23 +395,40 @@
     <section class="section-card" id="solution" data-aos="zoom-in-up">
         <h2>Selected Design Solution</h2>
         
+        <h3>Initial Solutions Sketches</h3>
+
         <div class="row g-4 mb-4">
             <div class="col-md-6 text-center">
-                <h3>Annotated Concept Sketch</h3>
-                <img src="../images/DS_images/Prototype_sketch.png" alt="Annotated Concept Sketch" class="img-fluid-rounded border bg-white p-1 mb-2">
+                <h4>Primary Design: Rubber Wheel with Metal Spikes</h4>
+                <img src="../images/DS_images/Prototype_sketch.png" alt="Primary Design Sketch" class="img-fluid-rounded border bg-white p-1 mb-2">
                 <p class="text-muted fst-italic">Figure 2: Annotated sketch highlighting the rubber tread integration with metal grousers.</p>
             </div>
             <div class="col-md-6 text-center">
-                <h3>Refined Prototype</h3>
-                <!-- Placeholder for real prototype photo -->
-                <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto border rounded mb-2" style="width: 100%; height: 300px;">
-                    <img src="../deletelater/resources/image_1656994581_0.jpg" alt="Refined Prototype" class="img-fluid" style="max-height: 100%; opacity: 0.9;">
-                </div>
-                <p class="text-muted fst-italic">Figure 3: The physical prototype assembled for testing.</p>
+                <h4>Secondary Design: 3D Printed Rubber Wheel with Tire Treads</h4>
+                <img src="../images/DS_images/Prototype2_sketchpng.png" alt="Secondary Design Sketch" class="img-fluid-rounded border bg-white p-1 mb-2">
+                <p class="text-muted fst-italic">Figure 3: Annotated sketch of the secondary 3D printed rubber wheel design.</p>
             </div>
         </div>
 
-        <h3>Operation Video</h3>
+        <p>
+            Our initial 3D-printed TPU prototype lacked the necessary refinement, as while the material demonstrated promising traction properties, the printing process yielded unsatisfactory results. Due to our dissatisfaction with the TPU wheel's performance, we chose to concentrate exclusively on the metal-spiked wheel design. This decision was made after investing considerable time and resources into the TPU prototype, which proved to be unsuccessful. Further details regarding this prototyping process will be elaborated upon in the Prototyping Iterations page.
+        </p>
+
+        <div class="text-center mb-4">
+            <h4>Final Refined Prototype</h4>
+            <!-- Placeholder for final refined prototype photo -->
+            <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto border rounded mb-2" style="width: 100%; height: 300px;">
+                <p class="text-muted mb-0">[Final refined prototype photo placeholder]</p>
+            </div>
+            <p class="text-muted fst-italic">Figure 4: The final refined prototype of the rubber wheel with metal spikes.</p>
+        </div>
+    </section>
+
+    <!-- Operation Video Section -->
+    <section class="section-card" id="operation-video" data-aos="fade-up">
+        <h2>Operation Video</h2>
+
+        <h3>Primary Design Demonstration</h3>
         <div class="bg-black text-white d-flex flex-column align-items-center justify-content-center rounded mb-3" style="height: 400px;">
             <p class="mb-3">[VIDEO PLACEHOLDER]</p>
             <p class="small text-white-50">Demonstration of the wheel traversing sand and climbing obstacles.</p>

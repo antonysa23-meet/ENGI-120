@@ -1,73 +1,140 @@
-const puppeteer = require("puppeteer");
-const path = require("path");
-
-// List of HTML files to convert (in pages folder)
-const htmlFiles = [
-    "About_Me.html",
-    "Team_Pitstop.html",
-    "Design_Analysis.html",
-    "Design_Solution.html",
-    "Prototype_Iteration.html",
-    "Communication.html"
-];
-
-const pagesFolder = "pages";
-const pdfsFolder = "pdfs";
+const puppeteer = require('puppeteer');
+const path = require('path');
+const fs = require('fs');
 
 (async () => {
-    console.log("Launching browser...");
-    const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  const htmlPath = 'file:///' + path.resolve('pages/Prototype_Iteration.html').replace(/\\/g, '/');
+  await page.goto(htmlPath, { waitUntil: 'networkidle0' });
+
+  // Get all video containers and their positions
+  const videoContainers = await page.evaluate(() => {
+    const videos = document.querySelectorAll('video');
+    const containers = [];
+
+    videos.forEach((video, index) => {
+      let element = video;
+      // Find the parent container (likely the div with text-center class)
+      while (element && !element.classList.contains('text-center')) {
+        element = element.parentElement;
+      }
+      if (element) {
+        // Mark the container with a unique ID
+        element.setAttribute('data-video-container', index);
+        containers.push({
+          index: index,
+          id: `data-video-container="${index}"`
+        });
+      }
     });
 
-    for (const htmlFile of htmlFiles) {
-        const page = await browser.newPage();
+    return containers;
+  });
 
-        // Get the absolute path to your HTML file
-        const htmlPath = path.join(__dirname, pagesFolder, htmlFile);
-        const fileUrl = `file:///${htmlPath.replace(/\\/g, "/")}`;
-        const pdfName = path.join(pdfsFolder, htmlFile.replace(".html", ".pdf"));
+  if (videoContainers.length > 0) {
+    console.log(`${videoContainers.length} video(s) detected! Splitting PDF into ${videoContainers.length + 1} parts...`);
 
-        console.log(`\nProcessing: ${htmlFile}`);
-        console.log(`Loading HTML from: ${fileUrl}`);
+    // Generate PDFs for each section
+    for (let i = 0; i <= videoContainers.length; i++) {
+      await page.goto(htmlPath, { waitUntil: 'networkidle0' });
 
-        try {
-            // Load the HTML file and wait for all resources
-            await page.goto(fileUrl, {
-                waitUntil: "networkidle0",
-                timeout: 60000
-            });
+      // Re-mark containers after reload
+      await page.evaluate(() => {
+        const videos = document.querySelectorAll('video');
+        videos.forEach((video, index) => {
+          let element = video;
+          while (element && !element.classList.contains('text-center')) {
+            element = element.parentElement;
+          }
+          if (element) {
+            element.setAttribute('data-video-container', index);
+          }
+        });
+      });
 
-            // Wait a bit more for any animations to settle
-            await new Promise(resolve => setTimeout(resolve, 2000));
+      await page.evaluate((partIndex, totalVideos) => {
+        const allContainers = document.querySelectorAll('[data-video-container]');
 
-            console.log(`Generating PDF: ${pdfName}`);
+        if (allContainers.length === 0) return;
 
-            // Get the full page height
-            const bodyHeight = await page.evaluate(() => document.body.scrollHeight);
-
-            await page.pdf({
-                path: pdfName,
-                width: "8.5in", // Standard US Letter width
-                height: `${bodyHeight}px`, // Dynamic height based on content
-                printBackground: true,
-                margin: {
-                    top: "0px",
-                    bottom: "0px",
-                    left: "0px",
-                    right: "0px"
-                }
-            });
-
-            console.log(`✓ PDF generated successfully: ${pdfName}`);
-        } catch (error) {
-            console.error(`✗ Error processing ${htmlFile}:`, error.message);
+        // Hide header for all parts except the first one
+        if (partIndex > 0) {
+          const header = document.querySelector('.hero-header');
+          if (header) {
+            header.style.display = 'none';
+          }
         }
 
-        await page.close();
+        if (partIndex === 0) {
+          // Part 1: Show everything before first video
+          const firstContainer = allContainers[0];
+          const parent = firstContainer.parentElement;
+          if (!parent) return;
+          const children = Array.from(parent.children);
+          const startIndex = children.indexOf(firstContainer);
+
+          // Hide from first video onwards
+          for (let j = startIndex; j < children.length; j++) {
+            children[j].style.display = 'none';
+          }
+        } else if (partIndex <= totalVideos) {
+          // Middle parts: Show content between videos
+          const parent = allContainers[0].parentElement;
+          if (!parent) return;
+          const children = Array.from(parent.children);
+
+          // Hide everything before previous video (including the video)
+          const prevContainer = allContainers[partIndex - 1];
+          const prevIndex = children.indexOf(prevContainer);
+          for (let j = 0; j <= prevIndex; j++) {
+            children[j].style.display = 'none';
+          }
+
+          // Hide from current video onwards (if not last part)
+          if (partIndex < totalVideos) {
+            const currentContainer = allContainers[partIndex];
+            const currentIndex = children.indexOf(currentContainer);
+            for (let j = currentIndex; j < children.length; j++) {
+              children[j].style.display = 'none';
+            }
+          }
+        }
+      }, i, videoContainers.length);
+
+      const pdfPath = `Prototype_Iteration_Part${i + 1}.pdf`;
+      await page.pdf({
+        path: pdfPath,
+        format: 'A4',
+        printBackground: true,
+        margin: {
+          top: '20px',
+          right: '20px',
+          bottom: '20px',
+          left: '20px'
+        }
+      });
+      console.log(`Part ${i + 1} PDF generated: ${pdfPath}`);
     }
 
-    await browser.close();
-    console.log("\n✓ All PDFs generated successfully!");
+  } else {
+    console.log('No video detected. Generating single PDF...');
+
+    // Generate single PDF if no video
+    await page.pdf({
+      path: 'Prototype_Iteration.pdf',
+      format: 'A4',
+      printBackground: true,
+      margin: {
+        top: '20px',
+        right: '20px',
+        bottom: '20px',
+        left: '20px'
+      }
+    });
+    console.log('PDF generated successfully: Prototype_Iteration.pdf');
+  }
+
+  await browser.close();
 })();
