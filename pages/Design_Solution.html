@@ -516,46 +516,99 @@
     <!-- Testing -->
     <section class="section-card" id="testing" data-aos="fade-up">
         <h2>Testing & Validation</h2>
-        
-        <div class="table-responsive">
-            <table class="table table-custom table-striped">
-                <thead>
-                    <tr>
-                        <th>Test Case</th>
-                        <th>Procedure</th>
-                        <th>Success Criteria</th>
-                        <th>Result</th>
-                        <th>Pass/Fail</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Traction / Slope Climb</td>
-                        <td>Drive up 30° incline w/ sand</td>
-                        <td>No slip > 10cm</td>
-                        <td>Climbed 30° with minimal slip</td>
-                        <td class="test-pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Load Test</td>
-                        <td>Apply 75kg static load</td>
-                        <td>No cracking/deformation</td>
-                        <td>Held 75kg, minor flex</td>
-                        <td class="test-pass">PASS</td>
-                    </tr>
-                    <tr>
-                        <td>Drop Test</td>
-                        <td>Drop from 1m onto concrete</td>
-                        <td>Operational afterwards</td>
-                        <td>Rim dented, still rolls</td>
-                        <td class="test-partial">PARTIAL</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <p>
+            To evaluate whether our rover wheel design met the performance goals established in our EDP test plan, we conducted a structured series of tests aligned with our seven design criteria: traction, durability, replicability, weight, size, replaceability, and coolness. Each test was defined in the EDP, along with its corresponding methods, pass or fail thresholds, and required materials. Our testing results and raw data are referenced in Appendix E. The testing included both intermediate prototype testing (Iteration 4) and final prototype evaluations (Iterations 5 and 6), allowing us to assess how design changes impacted performance.
+        </p>
+
+        <h3 class="mt-4">Testing Methodology</h3>
+        <p>
+            To assess <strong>traction</strong>, we conducted a standard incline test on a sand-covered wooden board intended to simulate the competition conditions in Utah. We made a makeshift axle to attach two wheels to and placed it on the incline. We increased the incline gradually to achieve angles from 6-20 degrees and the wheel assembly passed at a given angle if it remained static. Using the wheel system's weight of 3.4kg we calculated the frictional force at each angle using F = μWsin(θ). The coefficient of friction was from the contact of rubber to sand.
+        </p>
+
+        <div class="text-center my-4">
+            <img src="../images/DS_images/traction testpng.png" alt="Traction Test Setup" class="img-fluid rounded border bg-white p-2" style="max-width: 100%; max-height: 400px;">
+            <p class="text-muted fst-italic">Figure 7: Traction test setup on sand-covered incline</p>
+        </div>
+
+        <p>
+            <strong>Durability</strong> was evaluated using a drop test in which each prototype was dropped from 10, 20, 30, 40, and 50 inches onto hard gravel. The wheel failed if spikes detached or had significant blunting. <strong>Replicability</strong> was tested by timing the manufacturing process to make a copy of the wheel from start to finish. <strong>Weight</strong> and <strong>Size</strong> were measured using standard instrumentation and were compared to the dimensional constraints from the beginning of the project. We did not end up carrying out any tests for <strong>replaceability</strong> as it needed to be tested on Rice Robotics' full-scale prototype which upon the time of writing this report has not been finished to the extent needed. <strong>Coolness</strong> was tested from peer feedback on the wheel design and responses were compared to our target and matched to a numerical value as per our UDS (Appendix H).
+        </p>
+
+        <h3 class="mt-4">Intermediate Testing Results (Iteration 4)</h3>
+        <p>
+            Intermediate testing of iteration 4 demonstrated that the rubber rugby spike concept provided moderate traction but poor durability. Traction remained sufficient up to an incline of 15 degrees, where the wheel provided 3.91 N of frictional force compared to the 3.68 N required. At 16 degrees, however, slipping occurred as the required force exceeded the wheel's capability. Durability results were more concerning: rubber spikes visibly deformed at 30 inches and detached at 40 inches, failing our targets for durability. Weight (1.5 kg) and diameter (8.5 in) met the design constraints, but the shortcomings in spike resilience indicated the need for design changes. Based on these findings, documented in EDP 6b, we transitioned to metal track spikes and updated both the attachment method and use of adhesives to address the failures observed.
+        </p>
+
+        <h3 class="mt-4">Final Testing Results (Iterations 5 & 6)</h3>
+        <p>
+            Final testing of iterations 5 and 6 showed substantial performance improvements. Both prototypes, which differed only in spike layout, were tested simultaneously on the same axle and each trial was repeated three times for consistency. In traction testing, both designs remained stable at all tested angles up to 20 degrees which exceeded our target by 5 degrees. Slipping occurred only beyond this threshold, at angles where the required force (5.09 N) exceeded the wheel's limit (4.82 N).
+        </p>
+
+        <div class="text-center my-4">
+            <img src="../images/DS_images/traction graphjpg.jpg" alt="Friction Force Chart" class="img-fluid rounded border bg-white p-2" style="max-width: 100%; max-height: 400px;">
+            <p class="text-muted fst-italic">Chart 1: Friction Force of Test Wheels vs. Angle (Iteration 5, 6, and control)</p>
+        </div>
+
+        <p>
+            Durability results further validated the design shift as both versions survived drops up to 50 inches with no spike detachment. Some spikes loosened and displayed minor wear with iteration 5 taking the most damage. This led us to choose the diagonal spike layout of iteration 6 as our final design as the metal spikes distributed impact forces more effectively and also had almost the exact same friction test results of iteration 5.
+        </p>
+
+        <div class="text-center my-4">
+            <div class="table-responsive">
+                <table class="table table-bordered table-custom">
+                    <thead>
+                        <tr>
+                            <th>Drop Height (in)</th>
+                            <th>Wheel with Rugby Cleats</th>
+                            <th>Wheel with metal spikes in linear layout</th>
+                            <th>Wheel with metal spikes in diagonal layout</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>No damage</td>
+                            <td>No damage</td>
+                            <td>No damage</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>No damage</td>
+                            <td>No damage</td>
+                            <td>No damage</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Light damage</td>
+                            <td>No damage</td>
+                            <td>No damage</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Loss of 2 spikes</td>
+                            <td>Light damage</td>
+                            <td>No damage</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Loss of 2 more spikes</td>
+                            <td>Heavy spike blunting</td>
+                            <td>Light damage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-muted fst-italic">Table 3: Durability Test Results (Drop Test)</p>
         </div>
         
         <p class="mt-3">
-            <strong>Narrative:</strong> The prototype excelled in traction tests, easily scaling the required incline. However, the drop test revealed a weakness in the rim stiffness, which sustained minor damage. This suggests that while the tread concept is solid, the core structure requires reinforcement.
+            Replicability testing showed that reproducing iteration 6 could be done in 6 minutes and 50 seconds with relative ease. The only required tools were a drill and glue. This ease met our target for our UDS (Appendix H) for this criteria. Weight and size remained consistent with our intermediate testing, confirming that durability and traction improvements did not come at the expense of increased mass. Our feedback on the coolness criteria of iteration 6 was mostly indifferent as most people saw the spikes as cool but nothing particularly captivating about the design.
+        </p>
+        
+        <h3 class="mt-4">Summary & Recommendations</h3>
+        <p>
+            Together, these results show that our final prototype (iteration 6) met or exceeded the traction and durability goals outlined in our design criteria, while also highlighting opportunities for refinement. Future iterations should focus on strengthening the spike attachment, potentially through mechanical fasteners or higher-strength adhesives. Additionally, strengthening the spikes themselves to reduce wear and blunting would be beneficial for wheel longevity. These recommendations arise directly from the data collected across all prototypes and provide a clear path forward for enhancing performance in conditions representative of the University Rover Challenge.
         </p>
     </section>
 
