@@ -87,15 +87,20 @@
     <section class="section-card" id="prototyping-overview" data-aos="fade-up">
         <h2>Prototyping Overview</h2>
         <p>
-            During our prototyping process, we ended up having six key iterations of our design. At the beginning of our prototyping journey, we identified a minimum of three key features: the wheel's axle attachment structure, non-pneumatic tires, and spikes/treads for increased traction.
+            Throughout our prototyping process, we developed six key iterations of our rover wheel design. From the start, we identified three essential features that would define a successful wheel: an effective axle attachment structure, a non-pneumatic tire design, and surface modifications (spikes or treads) to enhance traction on challenging terrain.
+        </p>
+        <p>
+            Each iteration built upon lessons learned from the previous version, allowing us to refine our approach through systematic testing and evaluation. This methodical process helped us identify the optimal combination of materials, manufacturing techniques, and design features to meet the client's requirements.
         </p>
     </section>
 
     <!-- Iteration 1 & 2: PLA Low Fidelity Prototypes -->
     <section class="section-card" id="iteration-1-2" data-aos="fade-up">
         <h2>Iteration 1 & 2: PLA Low Fidelity Prototypes</h2>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Design Approach</h3>
         <p>
-            For our first two iterations, we created a low-fidelity prototype that was both representative and a proof-of-concept. This included making two wheels that were the same in terms of their structure and dimensions but differed in the wheel exterior, either having treads or spikes. We pursued both of these exterior designs in this iteration due to the CAD process for designing these wheels to 3D print being almost a copy-and-paste of each other.
+            Our first two iterations were low-fidelity prototypes designed to serve as both proof-of-concept models and visual representations of our ideas. We created two wheels with identical core structures and dimensions, but tested different exterior designs—one with treads and one with spikes. Since the CAD models only required minor modifications between the two designs, we pursued both options simultaneously.
         </p>
 
         <div class="text-center mb-4">
@@ -103,60 +108,90 @@
             <p class="text-muted fst-italic">Figure 1: PLA Low Fidelity Prototypes (Iteration 1 & 2)</p>
         </div>
 
+        <h3 class="h5 text-primary mt-4 mb-3">Implementation</h3>
         <p>
-            We incorporated all of the features we identified in this low-quality 3D printed model. The axle attachment structure was created in the center of the wheel after we discovered the type of motor that Rice Robotics was considering using in the Rover. The spikes and treads were made with similar dimensions to what we planned to use in our final design. The purpose of this prototype was to translate our idea into a 3D space and see how our wheel design compared to the pre-existing low-fidelity wheels that Rice Robotics had made for their low-fidelity prototype of their Rover. From this prototype, we discovered that PLA did not give a satisfactory amount of traction or wheel compression. We also found that we needed to ensure that the spikes were securely attached and wouldn't take excessive damage or fall off, as they were a weak point of this iteration. As a result of these findings, we decided to move on and 3D print in TPU, which is known for having a better grip and a higher compression factor than stiff PLA.
+            These 3D-printed models incorporated all the key features we had identified. The central axle attachment was designed to match the motor specifications Rice Robotics planned to use in their rover. The spikes and treads were sized according to our initial design specifications. The main purpose of these prototypes was to translate our concept into a physical form and compare our design against the existing low-fidelity wheels that Rice Robotics had made for their rover prototype.
         </p>
 
         <div class="text-center mb-4">
             <img src="../images/Iterations/iteration1-2(2).png" alt="CAD Technical Drawing" class="img-fluid bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 2: CAD Technical Drawing (Iteration 1 & 2)</p>
         </div>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Findings and Next Steps</h3>
+        <p>
+            Testing revealed several important limitations. PLA did not provide adequate traction or compression for the rover's needs. Additionally, we observed that the spikes were not securely attached and could easily break off or become damaged under stress. Based on these findings, we decided to transition to TPU for our next iteration, a material known for its superior grip and flexibility compared to rigid PLA.
+        </p>
     </section>
 
     <!-- Iteration 3: TPU Medium Fidelity Prototype -->
     <section class="section-card" id="iteration-3" data-aos="fade-up">
         <h2>Iteration 3: TPU Medium Fidelity Prototype</h2>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Design Strategy</h3>
         <p>
-            In our third iteration, the main goal was to explore the possibility of printing our final design with a TPU exterior and a PLA core structure. To do this, we cut the center structure out of the CAD models from our first iteration and printed just the outside of the wheels. However, we faced challenges in the printing process of this wheel and struggled to get a print that came out with decent quality. Finding the right balance of extruding speed, extruder temperature, and keeping overall print time down proved a difficult task. From this prototype, we saw that the time put into making just this single low-quality wheel was not feasible to scale up and repeat four times in our final design. As a result of this iteration and the first one, we decided to move on to purchasing a pre-existing wheel and modifying it to gain the desired attributes we wanted in our final design.
+            For our third iteration, we explored a hybrid approach: combining a TPU exterior with a PLA core structure. We modified our earlier CAD models by removing the center components and printing only the outer wheel sections. This strategy aimed to combine TPU's traction benefits with PLA's structural support.
         </p>
 
         <div class="text-center mb-4">
             <img src="../images/Iterations/iteration3.png" alt="TPU Medium Fidelity Prototype" class="img-fluid bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 3: TPU Medium Fidelity Prototype (Iteration 3)</p>
         </div>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Manufacturing Challenges</h3>
+        <p>
+            The printing process proved more difficult than expected. We struggled to achieve consistent quality, facing challenges with extrusion speed, extruder temperature, and overall print time. Even a single low-quality wheel required significant time investment, making this approach impractical for producing four wheels within our timeline. These manufacturing difficulties, combined with insights from our first two iterations, led us to pivot our strategy. We decided to purchase pre-existing wheels and modify them to achieve our desired performance characteristics.
+        </p>
     </section>
 
     <!-- Iteration 4: Medium-High Fidelity Prototype -->
     <section class="section-card" id="iteration-4" data-aos="fade-up">
         <h2>Iteration 4: Medium-High Fidelity Prototype</h2>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Modified Commercial Base</h3>
         <p>
-            In our fourth iteration, we purchased and modified a wheel that met our needed scale and was non-pneumatic. This wheel allowed us to test manufacturing methods on it for our final design, and we also used this wheel to perform our first durability and traction tests since it was at the needed size and just slightly over our goal weight. We modified the existing wheel by drilling holes into the exterior and then fitting the screws of rugby cleat spikes into the holes with adhesive. We tried to excavate some of the rubber from the exterior to make treads, but this proved very difficult given the wheel's hardness. We made a make-shift axle and attached it to the wheel for testing purposes and to check the ease of use of the axle attachment structure. We also began exploring spike layout designs in this prototype, trying to find what would offer us the greatest traction result. Ultimately, this iteration gave us a lot of information, and we realized that we would achieve the most successful final design by using this purchased wheel as a base for further modifications. This showed us that using the spike exterior design would be best moving forward, and we stopped pursuing the idea of treading our wheels. The spikes did have a tendency to fall out, so improving the connection method was needed for higher durability. In the testing of this prototype and meetings with Dr. Holmes and Dr. McGlamery, we saw that these spikes were too large and didn't allow us to maximize surface area with the ground, resulting in less traction. As a result, we purchased more of these wheels and continued modifying them, but with different spikes, and we manipulated the spike layout.
+            In this iteration, we purchased a commercial non-pneumatic wheel that met our size requirements. This wheel served as a testbed for our manufacturing methods and allowed us to conduct our first full-scale durability and traction tests, as it matched our target dimensions and came in slightly above our weight goal. We modified the wheel by drilling holes in the exterior and securing rugby cleat spikes with adhesive. We also attempted to carve treads into the rubber surface, but the wheel's hardness made this impractical. A makeshift axle was fabricated and attached to test the mounting system's ease of use.
         </p>
 
         <div class="text-center mb-4">
             <img src="../images/Iterations/iteration4.png" alt="Medium-High Fidelity Prototype" class="img-fluid bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 4: Medium-High Fidelity Prototype (Iteration 4)</p>
         </div>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Testing and Insights</h3>
+        <p>
+            We experimented with different spike layouts to determine which configuration would provide the best traction. This iteration yielded valuable information: using a purchased wheel as a base for modifications was the most viable path forward, and spikes were more effective than treads for our application. However, we identified two critical issues. First, the spikes had a tendency to detach, indicating we needed a more robust attachment method. Second, feedback from Dr. Holmes and Dr. McGlamery revealed that the rugby cleat spikes were too large, reducing ground contact area and limiting traction performance. These findings guided our next steps: we purchased additional base wheels and switched to smaller track spikes with optimized placement patterns.
+        </p>
     </section>
 
     <!-- Iteration 5 & 6: High Fidelity Prototypes -->
     <section class="section-card" id="iteration-5-6" data-aos="fade-up">
         <h2>Iteration 5 & 6: High Fidelity Prototypes</h2>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Refined Design Implementation</h3>
         <p>
-            In our fifth and sixth iterations, we used the same wheel from iteration 4, but used track spikes instead of rugby cleats, and we varied the spike layout. In attaching the spikes, we precisely measured out the distances between each spike and used precise drilling and adhesive to ensure a high-quality and strong attachment for each spike. We used a fresh set of wheels as well to ensure that the tread excavation on the wheel from iteration 4 wouldn't lower the quality of these iterations. In our testing, we saw that these wheels performed the same in terms of traction, but iteration 6 performed better in durability and replicability.
+            For iterations five and six, we used the same commercial wheel base as iteration 4, but replaced the rugby cleat spikes with smaller track spikes and tested different spike layouts. We carefully measured and marked the placement of each spike, then used precision drilling and adhesive to ensure strong, secure attachments. Fresh wheels were used for these iterations to avoid any performance degradation from the tread-cutting experiments in iteration 4.
         </p>
 
         <div class="text-center mb-4">
             <img src="../images/Iterations/iteration5-6.png" alt="High Fidelity Prototypes" class="img-fluid bg-white p-2 mb-2" style="max-width: 100%; max-height: 500px;">
             <p class="text-muted fst-italic">Figure 5: High Fidelity Prototypes (Iteration 5 & 6)</p>
         </div>
+
+        <h3 class="h5 text-primary mt-4 mb-3">Performance Comparison</h3>
+        <p>
+            Testing showed that both iterations performed similarly in terms of traction, meeting our performance targets. However, iteration 6 demonstrated superior durability and replicability, making it the clear choice for our final design recommendation.
+        </p>
     </section>
 
     <!-- Final Prototype Selection -->
     <section class="section-card" id="final-selection" data-aos="fade-up">
         <h2>Final Prototype Selection</h2>
         <p>
-            Due to the experimentation and iteration above, we selected iteration 6 as our final prototype. This model has our three key features: wheel axle attachment structure, non-pneumatic tires, and spikes/treads for increased traction. It performed best in most of our tests and met all of our clients' requirements. We made sure to make this iteration with sourcing the highest quality parts, and we took time to accurately place and secure all of the spikes. Ultimately, at the end of this process, we have created a prototype that incorporates all the elements we sought at the beginning, and performs above our target goal in our most important criterion, traction. All the features and the high performance of this recent iteration were made possible as a result of the systematic iterative process.
+            Based on our systematic testing and evaluation, we selected iteration 6 as our final prototype. This design successfully integrates all three key features we identified at the project's outset: a robust axle attachment structure, non-pneumatic tire construction, and enhanced traction through strategically placed spikes.
+        </p>
+        <p>
+            The final prototype met or exceeded all client requirements and performed best across most of our evaluation criteria. We sourced high-quality components and took care to precisely position and secure each spike. Most importantly, the wheel exceeded our target performance in traction—our highest priority design criterion. This success was made possible through our methodical iterative process, where each version informed the next, leading us to an optimized solution that balances performance, manufacturability, and cost.
         </p>
     </section>
 
